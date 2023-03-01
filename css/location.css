@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
 
 * {
     padding: 0;
@@ -31,6 +33,14 @@ html {
     height: 72px;
     left: 156px;
     top: 0px;
+}
+
+.__backbtn:hover .__arrowback {
+    background-color: #D5966C;
+}
+
+.__backbtn:hover .__backtext {
+    background-color:#151515;
 }
 
 .__arrowback {
@@ -251,35 +261,17 @@ html {
     height: 20px;
     left: 1010px;
     top: 0px;
+    display: flex;
 }
 
-.__socialmedia>.facebook {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 0px;
-    top: 0px;
+.__socialmedia>a {
+    padding: 10px;
 }
 
-.__socialmedia>.insta {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 0px;
-    top: 0px;
-    margin-left: 40px;
-    fill: #151515;
-
-}
-
-.__socialmedia>.twitter {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 0px;
-    top: 0px;
-    margin-left: 80px;
-    fill: #151515;
+.__socialmedia a:hover img{
+    filter: invert(100%) sepia(2%) saturate(7%)
+    hue-rotate(23deg) brightness(102%) contrast(102%);
+    transition: 0.03s;
 }
 
 @media only screen and (max-width: 768px) {

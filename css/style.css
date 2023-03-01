@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 
 * {
     padding: 0;
@@ -52,13 +53,15 @@ html {
     top: 0;
     bottom: 0;
     background: url(../assets/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
 .__containtexts>h1 {
     position: absolute;
     height: 176px;
-    left: 11.5%;
+    left: 13%;
     right: -50.89%;
     top: calc(50% - 176px/2 - 200.5px);
     font-family: 'Big Shoulders Display';
@@ -68,6 +71,7 @@ html {
     line-height: 88px;
     text-transform: uppercase;
     color: #FFFFFF;
+    mix-blend-mode: difference;
 }
 
 .__locationbtn {
@@ -78,14 +82,23 @@ html {
     top: 414px;
 }
 
+.__locationbtn:hover .__arrowforward {
+    background-color: #151515;
+}
+
+.__locationbtn:hover .__forwardtext {
+    background-color: #D5966C;
+}
+
 .__arrowforward {
     position: relative;
     width: 56px;
     height: 72px;
     left: 204px;
     top: 0px;
-    background: #151515;
+    background: #D5966C;
 }
+
 
 .__arrowforward>img {
     position: absolute;
@@ -101,7 +114,7 @@ html {
     height: 72px;
     left: 0px;
     top: 0px;
-    background: #D5966C;
+    background: #151515;
 }
 
 .__forwardtext>h3 {
@@ -255,7 +268,7 @@ html {
 
 .lastpart {
     position: absolute;
-    width: 1440px;
+    width: 100%;
     height: 244px;
     left: 0px;
     top: 2310px;
@@ -283,17 +296,15 @@ html {
     position: absolute;
     height: 36px;
     left: 0px;
-    top: 0px;
+    top: -30px;
 
     font-family: 'Big Shoulders Display';
     font-style: normal;
     font-weight: 900;
     font-size: 36px;
     line-height: 36px;
-
     text-transform: uppercase;
-
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .__textcontainer>p {
@@ -301,7 +312,7 @@ html {
     height: 84px;
     left: 41.1%;
     right: 0%;
-    top: calc(50% - 84px/2);
+    top: calc(50% - 115px/2);
 
     font-family: 'Outfit';
     font-style: normal;
@@ -318,42 +329,27 @@ html {
     height: 20px;
     left: 1010px;
     top: 0px;
+    display: flex;
 }
 
-.__mediaicons>.facebook {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 0px;
-    top: 0px;
+.__mediaicons a {
+    display: inline-block;
 }
 
-.__mediaicons>.insta {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 0px;
-    top: 0px;
-    margin-left: 40px;
-    fill: #151515;
-
+.__mediaicons a:hover img{
+    filter: invert(60%) sepia(71%) saturate(286%) hue-rotate(341deg) brightness(96%) contrast(81%);
+    transition: 0.05s;
 }
 
-.__mediaicons>.twitter {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    left: 0px;
-    top: 0px;
-    margin-left: 80px;
-    fill: #151515;
+ .__mediaicons>a {
+    padding: 10px;
 }
 
 
 @media only screen and (max-width: 768px) {
     * {
-        padding: 0;
-        /* margin: 0px 10px 0px 10px; */
+        padding: 0px;
+        margin: 0px;
     }
 
     body,
